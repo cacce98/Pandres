@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <title>{%block titulo%}Plantilla{%endblock%}</title>
+
+    {%load static%}
+    <link type="text/css" rel="stylesheet" href={% static "inicio/css/bootstrap.min.css" %}>
+    <link type="text/css" rel="stylesheet" href={% static "inicio/css/magnific-popup.css" %}>
+    <link type="text/css" rel="stylesheet" href={% static "inicio/css/animate.css" %}>
+    <link type="text/css" rel="stylesheet" href={% static "inicio/css/owl.carousel.min.css" %}>
+    <link type="text/css" rel="stylesheet" href={% static "inicio/css/themify-icons.css" %}>
+    <link type="text/css" rel="stylesheet" href={% static "inicio/css/pe-icon-7-stroke.css" %}>
+    <link type="text/css" rel="stylesheet" href={% static "inicio/css/icofont.css" %}>
+    <link type="text/css" rel="stylesheet" href={% static "inicio/css/meanmenu.min.css" %}>
+    <link type="text/css" rel="stylesheet" href={% static "inicio/css/bundle.css" %}>
+    <link type="text/css" rel="stylesheet" href={% static "inicio/css/style.css" %}>
+    <link type="text/css" rel="stylesheet" href={% static "inicio/css/responsive.css" %}>
+    <link type="text/css" rel="stylesheet" href={% static "inicio/css/menu.css" %}>
+
+    <!--link rel="stylesheet" href={% static "inicio/css/menu.css" %} type="text/css"-->
+    <script type="text/javascript" src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <!-- all js here -->
+    <script type="text/javascript" src="js/vendor/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="js/popper.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="js/jquery.counterup.min.js"></script>
+    <script type="text/javascript" src="js/waypoints.min.js"></script>
+    <script type="text/javascript" src="js/ajax-mail.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+    
+{%block cabecera%}
+    <ul class="nav">
+        <li><a href="{%url 'principal'%}">Principal</a></li>
+        <li><a href="{%url 'formulario'%}">Registro</a></li>
+        <li><a href="{%url 'contacto' %}">Contacto</a></li>
+    </ul>
+{%endblock%}
+<div class="breadcrumb-line">
+    <ul class="breadcrumb">
+        {{request.path}}
+    </ul>
+</div>
+{%block contenido%}
+    
+{%endblock%}
+</body>
+</html>
