@@ -1,2 +1,0 @@
-# Pandres
-Proyecto repositorio andres
