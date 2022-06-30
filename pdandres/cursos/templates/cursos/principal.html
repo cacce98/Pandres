@@ -1,0 +1,45 @@
+{% extends "inicio/encabezado.html" %}
+
+{% block titulo%}Inicio{%endblock%}
+
+{%block encabezado%}
+<!--Encabezdo -->
+<div class="page-header">
+    <div class="page-title">
+        <h3>Cursos
+        <small>Lista de de cursos en UTM</small></h3>
+    </div>        
+</div>
+<!-- /Encabezado-->
+{%endblock%}
+
+{%block contenido%}
+<table class="table table-bordered tablestriped">
+    <thead>
+    <tr>
+    <th>Imagenes</th>
+    <th>Nombre del curso</th>
+    <th>Nombre del profesor</th>
+    <th>Duracion</th>
+    <th>Evaluacion</th>
+    <th>Turno</th>
+    </tr>
+    </thead>
+    
+    <tbody>
+        {% for curso in cursos %}
+        <tr>
+        <td class="text-center">
+        <img src="{{curso.fotos.url}}" alt="" class="img-media">
+        </td>
+        <td class="text-semibold">{{curso.nombrecurso}}</td>
+        <td class="muted">{{curso.nombreprof}}</td>
+        <td class="muted">{{curso.duracion}}</td>
+        <td class="muted">{{curso.evaluacion}}</td>
+        <td class="muted">{{curso.turno}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{%endblock%}

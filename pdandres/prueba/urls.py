@@ -16,10 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from inicio import views
+from django.conf import settings
+from cursos import views as vCursos
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.principal, name="principal"),
+    path('', vCursos.cursos, name="principal"),
+    #path('', views.principal, name="principal"),
     path('formulario/',views.form, name="formulario"),
     path('contacto/',views.contact, name="contacto"),
 ]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT)
+

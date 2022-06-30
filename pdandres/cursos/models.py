@@ -8,13 +8,14 @@ class Cursos(models.Model):
     duracion = models.TextField(verbose_name="Duracion del curso")
     evaluacion = models.TextField(verbose_name="Tipo de evaluacion")
     turno = models.CharField(max_length=10,verbose_name="Turno en el que se imparte")
+    fotos = models.ImageField(null=True, upload_to="imagenes",verbose_name='Imagen')
     created = models.DateTimeField(auto_now_add=True)
     update = models.DateTimeField(auto_now_add=True)
 
-class Meta:
-    verbose_name = "Curso"
-    verbose_name_plural = "Cursos"
-    ordering = ["-creado"]
+    class Meta:
+        verbose_name = "Curso"
+        verbose_name_plural = "Cursos"
+        ordering = ["created"]
 
-def __str__(self):  # return number position model
+    def __str__(self):  # return number position model
         return self.nombrecurso
