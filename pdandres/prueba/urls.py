@@ -24,7 +24,14 @@ urlpatterns = [
     path('', vCursos.cursos, name="principal"),
     #path('', views.principal, name="principal"),
     path('formulario/',views.form, name="formulario"),
-    path('contacto/',views.contact, name="contacto"),
+    #path('contacto/',views.contact, name="contacto"),
+    path('registrar/',vCursos.registrar, name="registrar"),
+    path('contacto/',vCursos.contacto,name='contacto'),
+    #path('ejemplo/',views.ejemplo,name='ejemplo'),
+    path('comentario/',vCursos.registrar, name="comentario"),
+    path('eliminarComentario/<int:id>/',vCursos.eliminarComentarioContacto, name='Eliminar'),
+    path('formEditarComentario/<int:id>/', vCursos.consultarComentario, name='ConsultarIndividual'),
+    path('editarComentario/<int:id>/', vCursos.editarComentario, name='Editar'),
 ]
 
 if settings.DEBUG:

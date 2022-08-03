@@ -15,4 +15,4 @@ def form(request):
 
 def contact(request):
 
-    return render(request, "inicio/contact.html")
+    return render(request, "inicio/contacto.html")

@@ -8,53 +8,104 @@
     <title>{%block titulo%}Plantilla{%endblock%}</title>
 
     {%load static%}
-    <link type="text/css" rel="stylesheet" href={% static "inicio/css/bootstrap.min.css" %}>
-    <link type="text/css" rel="stylesheet" href={% static "inicio/css/magnific-popup.css" %}>
-    <link type="text/css" rel="stylesheet" href={% static "inicio/css/animate.css" %}>
-    <link type="text/css" rel="stylesheet" href={% static "inicio/css/owl.carousel.min.css" %}>
-    <link type="text/css" rel="stylesheet" href={% static "inicio/css/themify-icons.css" %}>
-    <link type="text/css" rel="stylesheet" href={% static "inicio/css/pe-icon-7-stroke.css" %}>
-    <link type="text/css" rel="stylesheet" href={% static "inicio/css/icofont.css" %}>
-    <link type="text/css" rel="stylesheet" href={% static "inicio/css/meanmenu.min.css" %}>
-    <link type="text/css" rel="stylesheet" href={% static "inicio/css/bundle.css" %}>
-    <link type="text/css" rel="stylesheet" href={% static "inicio/css/style.css" %}>
-    <link type="text/css" rel="stylesheet" href={% static "inicio/css/responsive.css" %}>
-    <link type="text/css" rel="stylesheet" href={% static "inicio/css/menu.css" %}>
+    <link href="{% static 'inicio/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css">
+    <link href="{% static 'inicio/css/londinium-theme.css'%}" rel="stylesheet" type="text/css">
+    <link href="{% static 'inicio/css/styles.css'%}" rel="stylesheet" type="text/css">
+    <link href="{% static 'inicio/css/icons.css'%}" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
 
-    <!--link rel="stylesheet" href={% static "inicio/css/menu.css" %} type="text/css"-->
-    <script type="text/javascript" src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 
-    <!-- all js here -->
-    <script type="text/javascript" src="js/vendor/jquery-1.12.0.min.js"></script>
-    <script type="text/javascript" src="js/popper.js"></script>
+    <script type="text/javascript" src="js/plugins/charts/sparkline.min.js"></script>
+
+    <script type="text/javascript" src="js/plugins/forms/uniform.min.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/select2.min.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/inputmask.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/autosize.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/inputlimit.min.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/listbox.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/multiselect.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/validate.min.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/tags.min.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/switch.min.js"></script>
+
+    <script type="text/javascript" src="js/plugins/forms/uploader/plupload.full.min.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/uploader/plupload.queue.min.js"></script>
+
+    <script type="text/javascript" src="js/plugins/forms/wysihtml5/wysihtml5.min.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/wysihtml5/toolbar.js"></script>
+
+    <script type="text/javascript" src="js/plugins/interface/daterangepicker.js"></script>
+    <script type="text/javascript" src="js/plugins/interface/fancybox.min.js"></script>
+    <script type="text/javascript" src="js/plugins/interface/moment.js"></script>
+    <script type="text/javascript" src="js/plugins/interface/jgrowl.min.js"></script>
+    <script type="text/javascript" src="js/plugins/interface/datatables.min.js"></script>
+    <script type="text/javascript" src="js/plugins/interface/colorpicker.js"></script>
+    <script type="text/javascript" src="js/plugins/interface/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="js/plugins/interface/timepicker.min.js"></script>
+
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
-    <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
-    <script type="text/javascript" src="js/jquery.counterup.min.js"></script>
-    <script type="text/javascript" src="js/waypoints.min.js"></script>
-    <script type="text/javascript" src="js/ajax-mail.js"></script>
-    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="js/plugins.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/application.js"></script>
+
 </head>
 
 <body>
-    
-{%block cabecera%}
-    <ul class="nav">
-        <li><a href="{%url 'principal'%}">Principal</a></li>
-        <li><a href="{%url 'formulario'%}">Registro</a></li>
-        <li><a href="{%url 'contacto' %}">Contacto</a></li>
-    </ul>
-{%endblock%}
-<div class="breadcrumb-line">
-    <ul class="breadcrumb">
-        {{request.path}}
-    </ul>
-</div>
-{%block contenido%}
-    
-{%endblock%}
+
+
+
+    <div class="page-container">
+
+
+        <!-- Barra de menú -->
+        <div class="sidebar">
+
+            <!-- Imagen de Usuario -->
+            <div class="user-menu dropdown">
+                <a href="#">
+                    <img src="{%block imagen%}{%endblock%}">
+                    <div class="user-info">
+                        Principal <span>DSM</span>
+                    </div>
+                </a>
+            </div>
+            <!-- / Imagen de Usuario -->
+
+            <div class="sidebar-content">
+                <!-- Menú de navegación -->
+                <ul class="navigation">
+                    <li><a href="{%url 'principal'%}">Principal</a></li>
+                    <li><a href="{%url 'formulario'%}">Registro</a></li>
+                    <li><a href="{%url 'contacto' %}">Contacto</a></li>
+                    <li><a href="{%url 'comentario' %}">Comentario</a></li>
+                </ul>
+                <!-- /Fin menú -->
+            </div>
+        </div>
+        <!-- /sidebar -->
+    </div>
+    <!-- Contenido Principal-->
+    <div class="page-content">
+        {%block encabezado%}
+        {%endblock%}
+
+        <div class="breadcrumb-line">
+            <ul class="breadcrumb">
+                <a href="{%url 'principal'%}">
+                    {%if request.path == '/' %}
+                        Principal
+                    {% else %}
+                        Pricipal{{request.path}}
+                    {% endif %}
+                </a>
+            </ul>
+        </div>
+
+        {% block contenido %}
+        {% endblock %}
+
+    </div>
+    <!-- /Contenido Principal-->
 </body>
+
 </html>
